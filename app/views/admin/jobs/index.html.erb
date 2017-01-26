@@ -46,7 +46,7 @@
                     <% end %>
                 </td>
                 <td>
-                    <%= job.created_at%>
+                    <%= local_time(job.created_at, '%B %e, %Y %H:%M:%S')%>
                 </td>
             </tr>
         <% end %>
