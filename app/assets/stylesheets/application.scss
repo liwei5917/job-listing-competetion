@@ -73,3 +73,5 @@
   box-shadow: 3px 3px 0px transparent;
   transition: 0.5s;
 }
+
+.pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}

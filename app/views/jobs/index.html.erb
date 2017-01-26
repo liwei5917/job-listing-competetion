@@ -40,9 +40,13 @@
                     <%= job.wage_upper_bound%>
                 </td>
                 <td>
-                    <%= job.created_at %>
+                    <%= local_time(job.created_at, '%B %e, %Y %H:%M:%S')%>
                 </td>
             </tr>
         <% end %>
     </tbody>
 </table>
+
+<div class="text-center col-md-12 pagination">
+  <%= will_paginate @jobs, renderer: BootstrapPagination::Rails %>
+</div>
