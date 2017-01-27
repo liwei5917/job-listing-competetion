@@ -29,15 +29,15 @@
 .title {
   font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
   text-align: center;
-  margin-top: 200px;
-  margin-bottom: 80px;
+  margin-top: 30px;
+  margin-bottom: 150px;
 }
 
 .slogan {
   margin-top: 10px;
   margin-bottom: 50px;
   text-align: center;
-  color: white;
+  color: red;
   top: 12px;
 }
 
@@ -75,3 +75,34 @@
 }
 
 .pagination>li>a, .pagination>li>span { border-radius: 50% !important;margin: 0 5px;}
+
+.navbar-default {
+    background-color: #FF5722;//背景颜色
+    border-color: #FF5722;//边框色
+    margin-bottom: 0;//底部 margin 不撑开距离
+}
+
+@media (min-width: 768px) {//去掉导航栏圆角
+    .navbar {
+        border-radius: 0;//圆角为0
+    }
+}
+
+.navbar-default .navbar-brand {
+   color: #2196F3;//字体颜色
+   padding: 10px 15px;//上下10px,左右15px
+   line-height: 30px;//文字行高
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #2E7D32;//鼠标放置在链接上的文字颜色
+  background-color: transparent;//鼠标放置在链接上的背景颜色，这里设为透明
+}
+
+.navbar-brand > img {//导航栏图片与logo的排版
+    display: inline-block;	//图片和链接文字显示在同一行
+    margin-right: 10px; //图片和链接文字拉开一点距离
+    width: 32px; //定制图片宽度
+    height: 32px; //定制图片高度
+}
