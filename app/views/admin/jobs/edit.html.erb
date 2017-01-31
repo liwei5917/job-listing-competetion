@@ -1,13 +1,31 @@
-<h1> Edit a job </h1>
+<div class="row main">
+  <div class="main-center">
+  <h1> 编辑工作 </h1>
+      <%= simple_form_for [:admin, @job ] do |f| %>
+      <div class="form-inputs">
+        <div class="cols-sm-10">
+            <%= f.input :title, required: true, autofocus: true, label: "工作名称", placeholder: "请输入工作名称" %>
+        </div>
+        <div class="cols-sm-10">
+            <%= f.input :description, required: true, autofocus: true, label: "工作描述", placeholder: "请输入工作描述" %>
+        </div>
+        <div class="cols-sm-10">
+          <%= f.input :wage_lower_bound, label: "薪资下限",  placeholder: "请输入薪资下限" %>
+        </div>
+        <div class="cols-sm-10">
+          <%= f.input :wage_upper_bound, label: "薪资上限",  placeholder: "请输入薪资上限" %>
+        </div>
+        <div class="cols-sm-10">
+          <%= f.input :contact_email, required: true, autofocus: true, label: "电子邮箱", placeholder: "请输入电子邮箱", type: "email", value: "", name: "user[email]", id: "user_email", input_html: { class: "string email required form-control" } %>
+        </div>
+        <%= f.input :is_hidden %>
 
-<%= simple_form_for [:admin, @job ] do |f| %>
+      </div>
 
-<%= f.input :title %>
-<%= f.input :description %>
-<%= f.input :wage_lower_bound, :label => "薪资下限" %>
-<%= f.input :wage_upper_bound, :label => "薪资上限"%>
-<%= f.input :contact_email, :label => "Contact Email" %>
-<%= f.input :is_hidden %>
+      <div class="form-actions">
+        <%= f.button :submit, "提交" %>
+      </div>
+      <% end %>
 
-  <%= f.submit "Submit" %>
-<% end %>
+  </div>
+  </div>
