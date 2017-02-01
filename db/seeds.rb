@@ -5,6 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+jobs_info = [["网页工程师","实现网页端的应用程序开发"],["安卓工程师","进行安卓操作系统方面应用的开发，包括手机，平版等方面"],["IOS工程师","进行IOS操作系统方面应用的开发"],["前端开发工程师","主要进行前端的开发，
+  美化等"],["后台开发","主要实现功能方面的应用"]]
+
+
 puts "這個種子檔會自動建立一個admin帳號, 並且創建 10 個 public jobs, 以及10個hidden jobs"
 
 create_account = User.create([email: 'example@gmail.com', password: '12345678', password_confirmation: '12345678', is_admin: 'true'])
