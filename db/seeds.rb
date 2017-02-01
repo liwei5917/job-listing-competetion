@@ -40,7 +40,7 @@ end
 
 puts "10 Public jobs created."
 
-create_jobs = for i in 1..30 do
+create_jobs = for i in 1..10 do
  job_test=jobs_info[rand(0..4)]
  company_test=company_info[rand(0..8)]
  Job.create!([title: job_test[0],description: job_test[1], wage_upper_bound: rand(50..99)*100,
