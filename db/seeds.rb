@@ -35,7 +35,7 @@ create_jobs = for i in 1..10 do
  job_test=jobs_info[rand(0..4)]
  company_test=company_info[rand(0..8)]
  Job.create!([title: job_test[0],description: job_test[1], wage_upper_bound: rand(50..99)*100,
-   wage_lower_bound: rand(10..49)*100, is_hidden:"false",location:company_test[1],company:company_test[0]])
+   wage_lower_bound: rand(10..49)*100, is_hidden:"false"])
 end
 
 puts "10 Public jobs created."
@@ -44,7 +44,7 @@ create_jobs = for i in 1..30 do
  job_test=jobs_info[rand(0..4)]
  company_test=company_info[rand(0..8)]
  Job.create!([title: job_test[0],description: job_test[1], wage_upper_bound: rand(50..99)*100,
-   wage_lower_bound: rand(10..49)*100, is_hidden:"true",location:company_test[1],company:company_test[0]])
+   wage_lower_bound: rand(10..49)*100, is_hidden:"true"])
 end
 
 puts "10 Hidden jobs created."
